@@ -212,24 +212,9 @@ function getFontSizeByWidth(testo, larghezza) {
 }
 
 function touchStarted() {
-  // Registra il tempo di inizio del tocco
-  tapStartTime = millis();
-  return false; // Previene il comportamento predefinito
+  mouseClicked();
 }
-function touchEnded() {
-  // Calcola la durata del tocco
-  let touchDuration = millis() - tapStartTime;
-  if (touchDuration < tapDuration) {
-    // Se la durata del tocco è inferiore a tapDuration, considera il tocco come un "tap"
-    handleTap(mouseX, mouseY);
-  }
-  return false; // Previene il comportamento predefinito
-}
-function handleTap(x, y) {
-  // Funzione da chiamare quando viene rilevato un tap
-  nofill();
-  noStroke();
-}
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
