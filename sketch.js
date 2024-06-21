@@ -197,7 +197,7 @@ function draw() {
   rect(0, spessore_h, w_i, h_i);
 }
 
-function mouseClicked() {
+function touchStarted() {
   animazione_reverse = !animazione_reverse;
   sfondo_corrente = random(sfondi);
 }
@@ -209,10 +209,6 @@ function getFontSizeByWidth(testo, larghezza) {
   let test_width = textWidth(testo);
   pop();
   return (test_size / test_width) * larghezza;
-}
-
-function touchStarted() {
-  mouseClicked();
 }
 
 function windowResized() {
